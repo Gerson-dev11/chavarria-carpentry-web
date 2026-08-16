@@ -61,7 +61,6 @@ El sistema sigue una estructura **Clean MVVM Architecture** combinada con servic
 
 Estructura del Código y Explicación por Capas
 A continuación se detalla la responsabilidad técnica de cada directorio dentro de la aplicación:
-
 📦 lib
  ┣ 📂 Backend                   # Microservicios backend embebidos (Node.js)
  ┃ ┣ 📂 pagos                   # Módulo de integración de pasarela de pagos
