@@ -82,66 +82,66 @@ A continuación se detalla la responsabilidad técnica de cada directorio dentro
  ┃ ┃ ┣ 📜 productos.dart      # Modelo de productos y categorías de muebles
  ┃ ┃ ┗ 📜 users.dart          # Modelo de perfil de usuario
  ┃ ┗ 📂 services              # Conectores y APIs de bajo nivel
- ┃ ┃ ┣ 📜 auth_service.dart   # Conexión directa con Supabase Auth
- ┃ ┃ ┣ 📜 envio.dart          # Lógica para cálculo y registro de envíos
- ┃ ┃ ┣ 📜 pedidos.dart        # Endpoints para creación de órdenes de compra
- ┃ ┃ ┣ 📜 products_service.dart # Consultas de productos a la base de datos
- ┃ ┃ ┣ 📜 searching_products.dart # Servicio de filtrado y búsqueda en tiempo real
- ┃ ┃ ┗ 📜 ubicacion_service.dart # Manejo de direcciones y geolocalización
- ┣ 📂 repositories            # Capa de Abstracción de Datos
- ┃ ┣ 📜 auth_repository.dart  # Repositorio puente para manejo de sesiones
- ┃ ┗ 📜 productos_usuario.dart # Gestión de productos asignados/favoritos del usuario
- ┣ 📂 viewmodels              # Capa de Lógica de Negocio y Estado (MVVM)
+ ┃ ┃ ┣ 📜 auth_service.dart       # Conexión directa con Supabase Auth
+ ┃ ┃ ┣ 📜 envio.dart              # Lógica para cálculo y registro de envíos
+ ┃ ┃ ┣ 📜 pedidos.dart            # Endpoints para creación de órdenes de compra
+ ┃ ┃ ┣ 📜 products_service.dart         # Consultas de productos a la base de datos
+ ┃ ┃ ┣ 📜 searching_products.dart       # Servicio de filtrado y búsqueda en tiempo real
+ ┃ ┃ ┗ 📜 ubicacion_service.dart       # Manejo de direcciones y geolocalización
+ ┣ 📂 repositories                  # Capa de Abstracción de Datos
+ ┃ ┣ 📜 auth_repository.dart       # Repositorio puente para manejo de sesiones
+ ┃ ┗ 📜 productos_usuario.dart     # Gestión de productos asignados/favoritos del usuario
+ ┣ 📂 viewmodels                    # Capa de Lógica de Negocio y Estado (MVVM)
  ┃ ┣ 📂 auth                  # Control de estado de autenticación
- ┃ ┃ ┣ 📜 viewmodel_emailsend.dart # Envío de correos/OTP para verificación
- ┃ ┃ ┣ 📜 viewmodel_login.dart # Estado e interacción de Inicio de Sesión
- ┃ ┃ ┣ 📜 viewmodel_password.dart # Lógica de recuperación de contraseña
- ┃ ┃ ┗ 📜 viewmodel_register.dart # Flujo de creación de cuentas de usuario
- ┃ ┣ 📂 home                  # Estado de la vista principal
- ┃ ┃ ┗ 📜 home_viewmodel.dart # Carga reactiva de banners, listas y destacados
- ┃ ┣ 📂 productos             # Gestión de productos e inventario reactivo
- ┃ ┃ ┣ 📜 carrito_viewmodel.dart # Lógica del carrito (añadir, eliminar, totales)
- ┃ ┃ ┗ 📜 productos_viewmodel.dart # Estado de filtros, categorías y catálogo
- ┃ ┗ 📂 servicios             # ViewModels para flujos adicionales
- ┃ ┃ ┣ 📜 favoritos.dart      # Gestión reactiva de productos guardados
- ┃ ┃ ┣ 📜 redireccionWoompi.dart # Orquestación y respuesta del flujo de pago
- ┃ ┃ ┗ 📜 viewmodel_pedidos.dart # Lógica para el seguimiento de órdenes creadas
- ┣ 📂 views                   # Capa de Interfaz de Usuario (UI)
- ┃ ┣ 📂 auth                  # Pantallas de acceso e identidad
- ┃ ┃ ┣ 📜 view_olvidepass.dart # Vista de recuperación de credenciales
- ┃ ┃ ┣ 📜 vista_login.dart    # Interface de inicio de sesión
- ┃ ┃ ┗ 📜 vista_register.dart # Interface de registro de nuevo cliente
- ┃ ┗ 📂 home                  # Pantallas y secciones de la aplicación
- ┃ ┃ ┣ 📂 sections            # Subvistas y páginas principales
- ┃ ┃ ┃ ┣ 📂 conditions        # Políticas legales
- ┃ ┃ ┃ ┃ ┗ 📜 terms_conditions.dart # Pantalla de Términos y Condiciones
- ┃ ┃ ┃ ┣ 📜 carrito_detalle.dart # Resumen final de la compra
- ┃ ┃ ┃ ┣ 📜 catalogos.dart    # Vista general del catálogo interactivo
- ┃ ┃ ┃ ┣ 📜 favoritos.dart    # Pantalla de artículos guardados
- ┃ ┃ ┃ ┣ 📜 filtros.dart      # Panel de filtrado avanzado
- ┃ ┃ ┃ ┣ 📜 info_producto.dart # Ficha técnica y detalle del mueble
- ┃ ┃ ┃ ┣ 📜 pagocompleto.dart # Confirmación de pago exitoso
- ┃ ┃ ┃ ┣ 📜 perfil.dart       # Ajustes de perfil e historial del usuario
- ┃ ┃ ┃ ┣ 📜 realizar_compra.dart # Checkout y selección de envío
- ┃ ┃ ┃ ┣ 📜 solicitar.dart    # Formulario para muebles a la medida
- ┃ ┃ ┃ ┗ 📜 verificacionPago.dart # Comprobación de estado de transacción
- ┃ ┃ ┣ 📂 widgets             # Componentes UI reutilizables
- ┃ ┃ ┃ ┣ 📂 animations        # Componentes visuales animados
- ┃ ┃ ┃ ┃ ┣ 📜 carrusel_imagenes.dart # Slider dinámico de productos
- ┃ ┃ ┃ ┃ ┗ 📜 custom_chargin.dart # Loader personalizado de la marca
- ┃ ┃ ┃ ┣ 📜 custom_APPBARUNIVERSAL.dart # Barra de navegación secundaria
- ┃ ┃ ┃ ┣ 📜 custom_appBar_home.dart # Header principal con acceso a perfil/carrito
- ┃ ┃ ┃ ┣ 📜 custom_carrusel.dart # Carrusel promocional
- ┃ ┃ ┃ ┣ 📜 custom_enviarCategorias.dart # Selector rápido de categorías
- ┃ ┃ ┃ ┣ 📜 custom_envio.dart # Formulario de dirección de entrega
- ┃ ┃ ┃ ┣ 📜 custom_footer.dart # Pie de página institucional
- ┃ ┃ ┃ ┣ 📜 custom_historialEnvios.dart # Lista de seguimientos
- ┃ ┃ ┃ ┣ 📜 custom_showdialog.dart # Modales de notificación estándar
- ┃ ┃ ┃ ┣ 📜 custom_tomarProductos.dart # Tarjeta de producto individual
- ┃ ┃ ┃ ┣ 📜 historialpedidos.dart # Tabla/Lista de compras pasadas
- ┃ ┃ ┃ ┣ 📜 popup.dart       # Diálogos emergentes
- ┃ ┃ ┃ ┗ 📜 popup2.dart      # Confirmaciones secundarias
- ┃ ┃ ┗ 📜 home_screen.dart    # Contenedor principal de la pantalla de inicio
+ ┃ ┃ ┣ 📜 viewmodel_emailsend.dart      # Envío de correos/OTP para verificación
+ ┃ ┃ ┣ 📜 viewmodel_login.dart          # Estado e interacción de Inicio de Sesión
+ ┃ ┃ ┣ 📜 viewmodel_password.dart       # Lógica de recuperación de contraseña
+ ┃ ┃ ┗ 📜 viewmodel_register.dart       # Flujo de creación de cuentas de usuario
+ ┃ ┣ 📂 home                        # Estado de la vista principal
+ ┃ ┃ ┗ 📜 home_viewmodel.dart     # Carga reactiva de banners, listas y destacados
+ ┃ ┣ 📂 productos                   # Gestión de productos e inventario reactivo
+ ┃ ┃ ┣ 📜 carrito_viewmodel.dart     # Lógica del carrito (añadir, eliminar, totales)
+ ┃ ┃ ┗ 📜 productos_viewmodel.dart     # Estado de filtros, categorías y catálogo
+ ┃ ┗ 📂 servicios                       # ViewModels para flujos adicionales
+ ┃ ┃ ┣ 📜 favoritos.dart                # Gestión reactiva de productos guardados
+ ┃ ┃ ┣ 📜 redireccionWoompi.dart         # Orquestación y respuesta del flujo de pago
+ ┃ ┃ ┗ 📜 viewmodel_pedidos.dart         # Lógica para el seguimiento de órdenes creadas
+ ┣ 📂 views                               # Capa de Interfaz de Usuario (UI)
+ ┃ ┣ 📂 auth                              # Pantallas de acceso e identidad
+ ┃ ┃ ┣ 📜 view_olvidepass.dart           # Vista de recuperación de credenciales
+ ┃ ┃ ┣ 📜 vista_login.dart                # Interface de inicio de sesión
+ ┃ ┃ ┗ 📜 vista_register.dart             # Interface de registro de nuevo cliente
+ ┃ ┗ 📂 home                                # Pantallas y secciones de la aplicación
+ ┃ ┃ ┣ 📂 sections                      # Subvistas y páginas principales
+ ┃ ┃ ┃ ┣ 📂 conditions                   # Políticas legales
+ ┃ ┃ ┃ ┃ ┗ 📜 terms_conditions.dart       # Pantalla de Términos y Condiciones
+ ┃ ┃ ┃ ┣ 📜 carrito_detalle.dart         # Resumen final de la compra
+ ┃ ┃ ┃ ┣ 📜 catalogos.dart                # Vista general del catálogo interactivo
+ ┃ ┃ ┃ ┣ 📜 favoritos.dart                # Pantalla de artículos guardados
+ ┃ ┃ ┃ ┣ 📜 filtros.dart                  # Panel de filtrado avanzado
+ ┃ ┃ ┃ ┣ 📜 info_producto.dart             # Ficha técnica y detalle del mueble
+ ┃ ┃ ┃ ┣ 📜 pagocompleto.dart             # Confirmación de pago exitoso
+ ┃ ┃ ┃ ┣ 📜 perfil.dart                   # Ajustes de perfil e historial del usuario
+ ┃ ┃ ┃ ┣ 📜 realizar_compra.dart           # Checkout y selección de envío
+ ┃ ┃ ┃ ┣ 📜 solicitar.dart                  # Formulario para muebles a la medida
+ ┃ ┃ ┃ ┗ 📜 verificacionPago.dart           # Comprobación de estado de transacción
+ ┃ ┃ ┣ 📂 widgets                             # Componentes UI reutilizables
+ ┃ ┃ ┃ ┣ 📂 animations                        # Componentes visuales animados
+ ┃ ┃ ┃ ┃ ┣ 📜 carrusel_imagenes.dart         # Slider dinámico de productos
+ ┃ ┃ ┃ ┃ ┗ 📜 custom_chargin.dart           # Loader personalizado de la marca
+ ┃ ┃ ┃ ┣ 📜 custom_APPBARUNIVERSAL.dart       # Barra de navegación secundaria
+ ┃ ┃ ┃ ┣ 📜 custom_appBar_home.dart       # Header principal con acceso a perfil/carrito
+ ┃ ┃ ┃ ┣ 📜 custom_carrusel.dart         # Carrusel promocional
+ ┃ ┃ ┃ ┣ 📜 custom_enviarCategorias.dart       # Selector rápido de categorías
+ ┃ ┃ ┃ ┣ 📜 custom_envio.dart         # Formulario de dirección de entrega
+ ┃ ┃ ┃ ┣ 📜 custom_footer.dart         # Pie de página institucional
+ ┃ ┃ ┃ ┣ 📜 custom_historialEnvios.dart       # Lista de seguimientos
+ ┃ ┃ ┃ ┣ 📜 custom_showdialog.dart         # Modales de notificación estándar
+ ┃ ┃ ┃ ┣ 📜 custom_tomarProductos.dart      # Tarjeta de producto individual
+ ┃ ┃ ┃ ┣ 📜 historialpedidos.dart          # Tabla/Lista de compras pasadas
+ ┃ ┃ ┃ ┣ 📜 popup.dart           # Diálogos emergentes
+ ┃ ┃ ┃ ┗ 📜 popup2.dart          # Confirmaciones secundarias
+ ┃ ┃ ┗ 📜 home_screen.dart        # Contenedor principal de la pantalla de inicio
  ┣ 📜 main.dart               # Punto de entrada de la aplicación Flutter
  ┣ 📜 rutas.dart              # Mapeo de rutas de navegación de la aplicación
  ┗ 📜 supabase.dart           # Inicialización y cliente singleton de Supabase
