@@ -1,4 +1,4 @@
-# 🪚 Chavarria Carpentry — Web Client Platform
+# Chavarria Carpentry — Web Client Platform
 
 [![Flutter Web](https://img.shields.io/badge/Flutter-Web_3.3%2B-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![Dart](https://img.shields.io/badge/Dart-3.3%2B_<_4.0-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
@@ -9,15 +9,15 @@ Plataforma e-commerce progresiva diseñada para modernizar la presencia digital 
 
 ---
 
-## 🔗 Demo en Vivo
+## Demo en Vivo
 
-> 🌐 **Ecosistema Web:** [Explorar Plataforma en Netlify](https://684266f214b54400085c7fd1--webchavarria.netlify.app/)
+> **Ecosistema Web:** [Explorar Plataforma en Netlify](https://684266f214b54400085c7fd1--webchavarria.netlify.app/)
 >
 > ⚠️ **Estado Actual del Servicio:** La interfaz de usuario y la navegación del catálogo están completamente funcionales. Las llamadas a la API de datos y el flujo de autenticación en tiempo real están temporalmente pausados debido a la caducidad de la capa gratuita del servidor de base de datos.
 
 ---
 
-## 💡 El Problema vs. La Solución
+## El Problema vs. La Solución
 
 | El Reto del Negocio | La Solución Tecnológica |
 | :--- | :--- |
@@ -27,7 +27,7 @@ Plataforma e-commerce progresiva diseñada para modernizar la presencia digital 
 
 ---
 
-## 🛠️ Arquitectura de Sistema
+## Arquitectura de Sistema
 
 El sistema utiliza un enfoque **Decoupled Client-BaaS Architecture**:
 
@@ -44,3 +44,63 @@ El sistema utiliza un enfoque **Decoupled Client-BaaS Architecture**:
 │  • PostgreSQL DB          │    │  • Verificación en 2 pasos│
 │  • Storage (Imágenes)     │    └───────────────────────────┘
 └───────────────────────────┘
+
+
+Características y Módulos Destacados
+Navegación y Filtros de Productos
+Búsqueda Dinámica: Filtrado en tiempo real por palabra clave, nombre de producto o tipo de mueble.
+
+Categorización Estructurada: Navegación por salas, dormitorios, comedores y trabajos a la medida.
+
+Tarjetas Informativas: Visualización de imágenes en alta resolución, dimensiones y descripciones detalladas.
+
+Autenticación y Seguridad
+Registro e Inicio de Sesión: Gestión de usuarios integrada con la base de datos de Supabase Auth.
+
+Protección de Carrito: Redirección automática hacia el módulo de Login/Register cuando un usuario no autenticado intenta añadir productos al carrito.
+
+Módulo OTP (2FA): Lógica de verificación mediante SendGrid para el envío y validación de tokens de seguridad durante el restablecimiento de credenciales.
+
+Desafíos Técnicos y Lecciones Aprendidas
+Optimización de Flutter Web: Para garantizar una carga rápida en navegadores desktop y móviles, se aplicaron técnicas de optimización de imágenes y la gestión eficiente del árbol de widgets.
+
+Manejo de Estados: Implementación de flujos reactivos para sincronizar el estado del carrito de compras con las búsquedas y filtros activos.
+
+Gestión de Servicios de Terceros: Integración de proveedores de correo (SendGrid) y autenticación BaaS (Supabase) bajo arquitecturas asíncronas.
+
+Configuración y Ejecución Local
+Prerrequisitos
+Flutter SDK: Version >=3.3.4 <4.0.0
+
+Dart SDK: Version >=3.3.4
+
+Google Chrome, Microsoft Edge o cualquier navegador moderno.
+
+
+Pasos para Ejecutar
+Clonar el repositorio:
+
+Bash
+git clone [https://github.com/tu-usuario/chavarria-carpentry-web.git](https://github.com/tu-usuario/chavarria-carpentry-web.git)
+cd chavarria-carpentry-web
+Instalar dependencias de Flutter:
+
+Bash
+flutter pub get
+Configurar Variables de Entorno / Supabase:
+Crea o edita el archivo de configuración en lib/config/supabase_config.dart con tus credenciales:
+
+Dart
+class SupabaseConfig {
+  static const String url = 'TU_SUPABASE_URL';
+  static const String anonKey = 'TU_SUPABASE_ANON_KEY';
+}
+Ejecutar en modo Desarrollo (Chrome):
+
+Bash
+flutter run -d chrome
+Compilar para Producción:
+
+Bash
+flutter build web --release
+Los archivos resultantes en build/web/ están listos para ser desplegados en Netlify, Vercel o GitHub Pages.
