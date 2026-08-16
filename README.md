@@ -148,39 +148,55 @@ A continuación se detalla la responsabilidad técnica de cada directorio dentro
 ```
 
 
-Características Principales
-Catálogo e Interacción
-Navegación Dinámica: Exploración de muebles por categorías con tarjetas interactivas (custom_tomarProductos.dart).
+# README
 
-Búsqueda Reactiva: Filtrado en tiempo real procesado desde la capa de servicios (searching_products.dart).
+## Características Principales
 
-Solicitudes Personalizadas: Módulo dedicado para cotizar trabajos de carpintería a la medida (solicitar.dart).
+### Catálogo e Interacción
+* **Navegación Dinámica:** Exploración de muebles por categorías con tarjetas interactivas (`custom_tomarProductos.dart`).
+* **Búsqueda Reactiva:** Filtrado en tiempo real procesado desde la capa de servicios (`searching_products.dart`).
+* **Solicitudes Personalizadas:** Módulo dedicado para cotizar trabajos de carpintería a la medida (`solicitar.dart`).
 
-Carrito y Pagos Integrados
-Estado del Carrito: Actualización en tiempo real mediante carrito_viewmodel.dart.
+### Carrito y Pagos Integrados
+* **Estado del Carrito:** Actualización en tiempo real mediante `carrito_viewmodel.dart`.
+* **Procesamiento de Pagos:** Integración con backend Node.js dedicado para la verificación de transacciones (`redireccionWoompi.dart`).
+* **Seguimiento de Envíos:** Gestión de direcciones e historial de órdenes asociadas al perfil de usuario.
 
-Procesamiento de Pagos: Integración con backend Node.js dedicado para la verificación de transacciones (redireccionWoompi.dart).
+---
 
-Seguimiento de Envíos: Gestión de direcciones e historial de órdenes asociadas al perfil de usuario.
+## Configuración y Ejecución Local
 
-Configuración y Ejecución Local
-Prerrequisitos
-Flutter SDK: Version >=3.3.4 <4.0.0
+### Prerrequisitos
+* **Flutter SDK:** Version `>=3.3.4 <4.0.0`
+* **Node.js:** `>=18.x` (para ejecutar el servicio de pagos en `lib/Backend/pagos`)
+* **Navegador:** Google Chrome o navegador compatible con Flutter Web.
 
-Node.js: >=18.x (para ejecutar el servicio de pagos en lib/Backend/pagos)
+---
 
-Google Chrome o navegador compatible con Flutter Web.
+### Pasos de Ejecución
 
-1. Clonar el repositorio
+#### 1. Clonar el repositorio
+```bash
 git clone [https://github.com/tu-usuario/chavarria-carpentry-web.git](https://github.com/tu-usuario/chavarria-carpentry-web.git)
 cd chavarria-carpentry-web
-2. Configurar el Backend de Pagos (Node.js)
+```
+
+####2. Configurar el Backend de Pagos (Node.js)
+```bash
 cd lib/Backend/pagos
 npm install
-# Configura el archivo .env con tus credenciales de pago
-npm start
+```
 
-3. Ejecutar la Aplicación Web (Flutter)
+Configura el archivo .env con tus credenciales de pago.
+Inicia el servicio:
+```Bash
+npm start
+```
+
+####3. Ejecutar la Aplicación Web (Flutter)
 Regresa a la raíz del proyecto, instala las dependencias de Dart e inicia la aplicación:
+
+```Bash
 flutter pub get
 flutter run -d chrome
+```
