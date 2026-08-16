@@ -181,7 +181,7 @@ git clone [https://github.com/tu-usuario/chavarria-carpentry-web.git](https://gi
 cd chavarria-carpentry-web
 ```
 
-####2. Configurar el Backend de Pagos (Node.js)
+#### 2. Configurar el Backend de Pagos (Node.js)
 ```bash
 cd lib/Backend/pagos
 npm install
@@ -193,7 +193,7 @@ Inicia el servicio:
 npm start
 ```
 
-####3. Ejecutar la Aplicación Web (Flutter)
+#### 3. Ejecutar la Aplicación Web (Flutter)
 Regresa a la raíz del proyecto, instala las dependencias de Dart e inicia la aplicación:
 
 ```Bash
