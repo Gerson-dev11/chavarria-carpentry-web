@@ -146,10 +146,6 @@ A continuación se detalla la responsabilidad técnica de cada directorio dentro
  ┣ 📜 rutas.dart              # Mapeo de rutas de navegación de la aplicación
  ┗ 📜 supabase.dart           # Inicialización y cliente singleton de Supabase
 ```
-
-
-# README
-
 ## Características Principales
 
 ### Catálogo e Interacción
