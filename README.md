@@ -4,7 +4,7 @@ pero el readme anterior tenia esto que me gusto bastante: # 🪚 Chavarria Carpe
 [![Dart](https://img.shields.io/badge/Dart-3.3%2B_<_4.0-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
 [![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
 [![Supabase](https://img.shields.io/badge/BaaS-Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
-[![Netlify](https://img.shields.io/badge/Deployment-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://netlify.com) <- esto de aqui
+[![Netlify](https://img.shields.io/badge/Deployment-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://netlify.com)
 
 Plataforma e-commerce progresiva diseñada para modernizar la presencia digital y el catálogo interactivo de una empresa de carpintería y diseño de muebles a la medida. El proyecto utiliza un patrón de arquitectura desacoplado **MVVM (Model-View-ViewModel)** en el frontend con Flutter, integrando servicios Serverless con Supabase y un microservicio en Node.js para el procesamiento seguro de pagos.
 
