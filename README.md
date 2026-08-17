@@ -173,7 +173,7 @@ A continuación se detalla la responsabilidad técnica de cada directorio dentro
 
 #### 1. Clonar el repositorio
 ```bash
-git clone [https://github.com/tu-usuario/chavarria-carpentry-web.git](https://github.com/tu-usuario/chavarria-carpentry-web.git)
+git clone [https://github.com/Gerson-dev11/chavarria-carpentry-web.git](https://github.com/Gerson-dev11/chavarria-carpentry-web.git)
 cd chavarria-carpentry-web
 ```
 
