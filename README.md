@@ -1,5 +1,3 @@
-pero el readme anterior tenia esto que me gusto bastante: # 🪚 Chavarria Carpentry — Web Client Platform
-
 [![Flutter Web](https://img.shields.io/badge/Flutter-Web_3.3%2B-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![Dart](https://img.shields.io/badge/Dart-3.3%2B_<_4.0-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
 [![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
